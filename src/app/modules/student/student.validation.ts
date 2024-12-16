@@ -34,7 +34,7 @@ const createStudentValidationSchema = z.object({
     student: z.object({
       name: userNameSchema, // Reuse a pre-defined schema for the 'name' property
       gender: z.enum(['male', 'female', 'other']), // Gender must be one of the enum values
-      dateOfBirth: z.date().optional(), // A string for the date of birth
+      dateOfBirth: z.string().optional(), // A string for the date of birth
       email: z.string().email(), // Email validation
       contactNo: z.string(), // Contact number as a string
       emergencyContactNo: z.string(), // Emergency contact number as a string
